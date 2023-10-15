@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  background: rgb(211, 245, 207);
+  background: linear-gradient(
+    39deg,
+    rgba(211, 245, 207, 1) 0%,
+    rgba(168, 219, 250, 1) 50%,
+    rgba(99, 94, 226, 1) 100%
+  );
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#bgtext-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 90%;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.random,
+.quote,
+.generator {
+  font-size: 72px;
+  font-family: "Cormorant Garamond", serif;
+  opacity: 0.5;
+  color: rgba(99, 94, 226, 0.75);
+  margin-bottom: -4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#quote-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: #121212;
+  height: 40%;
+  width: 40%;
+  padding: 1rem;
+  justify-content: space-between;
+  border-radius: 4px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#text {
+  height: 60%;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+#author {
+  height: 20%;
+  padding: 1rem;
+  text-align: end;
+}
+
+.buttons {
+  height: 20%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.5rem;
+  font-family: "Roboto", sans-serif;
 }
